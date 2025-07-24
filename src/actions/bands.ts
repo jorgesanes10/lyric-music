@@ -21,10 +21,7 @@ export const fetchBands = async ({
           ...band,
           description: additionalData.description,
         };
-      } catch (error) {
-        console.error(`File for ${band.id} not found or invalid JSON`, error);
-
-        // Handle fallback (optional)
+      } catch {
         return {
           ...band,
           description: 'We are working on the description for this band.',
