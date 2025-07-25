@@ -1,5 +1,31 @@
 import bands from '@/lib/mock_data/bands.json';
 
+const addDescriptions = async (
+  list: { id: string; band_name: string; album: string; genre: string }[],
+) => {
+  return await Promise.all(
+    list.map(async (band) => {
+      try {
+        const additionalDataModule = await import(
+          `@/lib/mock_data/${band.id}.json`
+        );
+
+        const additionalData = additionalDataModule.default;
+
+        return {
+          ...band,
+          description: additionalData.description,
+        };
+      } catch {
+        return {
+          ...band,
+          description: 'We are working on the description for this band.',
+        };
+      }
+    }),
+  );
+};
+
 export const fetchBands = async ({
   genre,
   query,
@@ -22,27 +48,7 @@ export const fetchBands = async ({
     );
   }
 
-  result = await Promise.all(
-    result.map(async (band) => {
-      try {
-        const additionalDataModule = await import(
-          `@/lib/mock_data/${band.id}.json`
-        );
-
-        const additionalData = additionalDataModule.default;
-
-        return {
-          ...band,
-          description: additionalData.description,
-        };
-      } catch {
-        return {
-          ...band,
-          description: 'We are working on the description for this band.',
-        };
-      }
-    }),
-  );
+  result = await addDescriptions(result);
 
   return result;
 };
@@ -50,27 +56,7 @@ export const fetchBands = async ({
 export const fetchBandById = async (id: string) => {
   let result = bands.filter((band) => band.id === id);
 
-  result = await Promise.all(
-    result.map(async (band) => {
-      try {
-        const additionalDataModule = await import(
-          `@/lib/mock_data/${band.id}.json`
-        );
-
-        const additionalData = additionalDataModule.default;
-
-        return {
-          ...band,
-          description: additionalData.description,
-        };
-      } catch {
-        return {
-          ...band,
-          description: 'We are working on the description for this band.',
-        };
-      }
-    }),
-  );
+  result = await addDescriptions(result);
 
   return result;
 };
