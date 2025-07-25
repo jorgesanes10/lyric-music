@@ -15,6 +15,7 @@ export const fetchBands = async ({
         const additionalDataModule = await import(
           `@/lib/mock_data/${band.id}.json`
         );
+
         const additionalData = additionalDataModule.default;
 
         return {

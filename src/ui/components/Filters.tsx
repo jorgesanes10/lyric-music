@@ -33,10 +33,10 @@ export const Filters = ({ className }: { className?: string }) => {
           }}
           key={`${genre}-filter`}
           className={clsx(
-            'px-5 py-[7px] bg-[#181818] rounded-[19px] text-[#cbcbcb] cursor-pointer  border border-white transition-all duration-300 ease-in-out',
-            {
-              'bg-[var(--accent)]': currentGenre === genre.toLowerCase(),
-            },
+            'px-5 py-[7px] rounded-[19px] text-[var(--text-color)] cursor-pointer border border-white transition-all duration-300 ease-in-out',
+            currentGenre === genre.toLowerCase()
+              ? 'bg-[var(--accent)] text-white'
+              : 'bg-[var(--background)]',
           )}
         >
           {genre}

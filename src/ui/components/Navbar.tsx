@@ -14,18 +14,21 @@ export const Navbar = ({
   showMenuButton?: boolean;
   onMenuButtonClick?: () => void;
 }) => {
+  const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const isDarkMode = darkModeQuery.matches;
+
   return (
     <Panel>
       <nav className="flex items-center gap-8 pr-5 nowrap">
         <Link href="/" className="relative">
           <Image
-            src="/images/logo.png"
+            src={isDarkMode ? '/images/logo.png' : '/images/logo-black.png'}
             alt="Lyric Music"
             width={163}
             height={105}
             className="min-w-[163px]"
           />
-          <span className="text-[9px] tracking-[3px] font-bold text-[#33e1a5] absolute right-[22px] bottom-[26px]">
+          <span className="text-[9px] tracking-[3px] font-bold text-[var(--accent)] absolute right-[22px] bottom-[26px]">
             MUSIC
           </span>
         </Link>
@@ -42,7 +45,7 @@ export const Navbar = ({
             )}
             onClick={onMenuButtonClick}
           >
-            <Bars3Icon className="h-9 w-9 text-[#cbcbcb]" />
+            <Bars3Icon className="h-9 w-9 text-[var(--text-color)]" />
           </button>
         </div>
       </nav>

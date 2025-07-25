@@ -41,19 +41,19 @@ export const HomeContent = ({ bands }: { bands: Band[] }) => {
             onMenuButtonClick={openSidebar}
           />
         </header>
-        <main>
+        <main className="overflow-y-auto">
           <BandsContainer bands={bands} />
         </main>
       </div>
       <aside className={clsx(sidebarOpen ? 'visible' : 'hidden')}>
-        <Panel className="px-7 py-9 text-md h-full">
+        <Panel className="px-7 py-9 text-md h-full overflow-y-auto">
           <div className="flex items-center justify-between mb-5">
             <Navigation className="in-sidebar" />
             <button
               className="cursor-pointer close-button-top"
               onClick={() => setSidebarOpen(false)}
             >
-              <XMarkIcon className="h-7 w-7 text-[#cbcbcb]" />
+              <XMarkIcon className="h-7 w-7 text-[var(--text-color)]" />
             </button>
           </div>
           <Filters className="in-sidebar mb-5 w-full" />
@@ -66,7 +66,7 @@ export const HomeContent = ({ bands }: { bands: Band[] }) => {
               className="cursor-pointer close-button-bottom"
               onClick={() => setSidebarOpen(false)}
             >
-              <XMarkIcon className="h-7 w-7 text-[#cbcbcb]" />
+              <XMarkIcon className="h-7 w-7 text-[var(--text-color)]" />
             </button>
           </div>
           <p className="mb-8">
@@ -92,16 +92,16 @@ export const HomeContent = ({ bands }: { bands: Band[] }) => {
             power of sound. So dive in, press play, and let the music move you.
             Welcome to your new favorite way to listen.
           </p>
-          <div className="bg-[#181818] p-5 flex gap-5 items-center">
+          <div className="bg-[var(--background)] p-5 flex gap-5 items-center rounded-[10px]">
             <div className="relative ml-6">
-              <FlagIcon className="h-10 w-10 text-[#33e1a5] rotate-15" />
-              <FlagIcon className="h-10 w-10 text-[#33e1a5] -rotate-15 rotate-y-180 absolute top-0 right-8" />
+              <FlagIcon className="h-10 w-10 text-[var(--accent)] rotate-15" />
+              <FlagIcon className="h-10 w-10 text-[var(--accent)] -rotate-15 rotate-y-180 absolute top-0 right-8" />
             </div>
             <div>
               <h3 className="text-[var(--accent)] font-bold text-[19px]">
                 COMING SOON
               </h3>
-              <p className="text-[#9c9c9c] text-[13px]">
+              <p className="text-[var(--text-dark)] text-[13px]">
                 Check out whats new for 2025 from the Lyric team.
               </p>
             </div>

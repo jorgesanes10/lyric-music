@@ -1,9 +1,13 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #dadada;
+  --background-dark: #ffffff;
+  --foreground: #333333;
   --accent: rgba(0, 114, 100, 1);
+  --text-color: #000000;
+  --text-dark: #222222;
+  --text-darker: #999999;
 }
 
 @theme inline {
@@ -14,7 +18,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #181818;
+    --background-dark: #000000;
     --foreground: rgba(156, 156, 156, 1);
+    --text-color: #cbcbcb;
+    --text-dark: #9c9c9c;
+    --text-darker: #484848;
   }
 }
 
@@ -23,6 +31,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter);
   font-size: 16px;
+}
+
+aside {
+  height: calc(100vh - 64px);
+}
+
+main {
+  height: calc(100vh - 201px);
+}
+
+.nav-filters button {
+  border: none;
 }
 
 .nav-filters:hover button:nth-child(2) {
@@ -35,10 +55,6 @@ body {
 
 .nav-filters:hover button:nth-child(4) {
   transform: translateX(120px);
-}
-
-.nav-filters button:not(:first-child) {
-  margin-left: -40px;
 }
 
 .menu-button {
@@ -75,6 +91,16 @@ body {
 
 .nav-filters.in-sidebar {
   display: none;
+}
+
+@media (max-width: 1405px) {
+  .nav-filters button {
+    border: 1px solid var(--foreground);
+  }
+
+  .nav-filters button:not(:first-child) {
+    margin-left: -40px;
+  }
 }
 
 @media (max-width: 1300px) {

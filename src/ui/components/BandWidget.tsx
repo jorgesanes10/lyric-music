@@ -35,7 +35,7 @@ export const BandWidget = ({ band }: BandWidgetProps) => {
           <h3 className="text-[var(--accent)] font-bold text-xl mb-2.5">
             {band_name}
           </h3>
-          <p className="text-[13px] text-[#CBCBCB] mb-2.5">{album}</p>
+          <p className="text-[13px] text-[var(--text-color)] mb-2.5">{album}</p>
           <p className="text-[13px]">{description}</p>
         </div>
       </article>
