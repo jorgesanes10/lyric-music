@@ -81,6 +81,10 @@ main {
   display: none;
 }
 
+.play-button {
+  left: calc(50% - 52px);
+}
+
 @media (max-width: 1405px) {
   .nav-filters button {
     border: 1px solid var(--foreground);

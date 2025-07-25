@@ -7,10 +7,23 @@ export const fetchBands = async ({
   genre?: string;
   query?: string;
 }) => {
-  let result = [];
+  let result = [...bands];
+
+  if (genre && genre !== 'all') {
+    result = result.filter((band) => band.genre === genre);
+  }
+
+  if (query) {
+    const lowerCaseQuery = query.toLowerCase();
+    result = result.filter(
+      (band) =>
+        band.band_name.toLowerCase().includes(lowerCaseQuery) ||
+        band.album.toLowerCase().includes(lowerCaseQuery),
+    );
+  }
 
   result = await Promise.all(
-    bands.map(async (band) => {
+    result.map(async (band) => {
       try {
         const additionalDataModule = await import(
           `@/lib/mock_data/${band.id}.json`
@@ -31,18 +44,33 @@ export const fetchBands = async ({
     }),
   );
 
-  if (genre && genre !== 'all') {
-    result = result.filter((band) => band.genre === genre);
-  }
+  return result;
+};
 
-  if (query) {
-    const lowerCaseQuery = query.toLowerCase();
-    result = result.filter(
-      (band) =>
-        band.band_name.toLowerCase().includes(lowerCaseQuery) ||
-        band.album.toLowerCase().includes(lowerCaseQuery),
-    );
-  }
+export const fetchBandById = async (id: string) => {
+  let result = bands.filter((band) => band.id === id);
+
+  result = await Promise.all(
+    result.map(async (band) => {
+      try {
+        const additionalDataModule = await import(
+          `@/lib/mock_data/${band.id}.json`
+        );
+
+        const additionalData = additionalDataModule.default;
+
+        return {
+          ...band,
+          description: additionalData.description,
+        };
+      } catch {
+        return {
+          ...band,
+          description: 'We are working on the description for this band.',
+        };
+      }
+    }),
+  );
 
   return result;
 };
