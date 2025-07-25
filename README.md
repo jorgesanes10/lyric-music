@@ -11,6 +11,8 @@
 1. Added e2e tests with Cypress.
 1. Added a band description page (routing) with a video to add a bit of fun to the UX
 
+You can see the live app [here](https://lyric-music-sepia.vercel.app)
+
 ## Running the project
 
 - Install the necessary dependencies by running `npm install`.
