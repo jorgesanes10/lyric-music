@@ -9,7 +9,7 @@
 1. Search for bands by album name in addition to band name.
 1. Changed the favicon to a custom one for personalization.
 1. Added e2e tests with Cypress.
-1. Added a band description page (routing)
+1. Added a band description page (routing) with a video to add a bit of fun to the UX
 
 ## Running the project
 
