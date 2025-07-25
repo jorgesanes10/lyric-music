@@ -1,6 +1,7 @@
 'use client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/16/solid';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -43,6 +44,13 @@ export const Search = ({ className }: { className?: string }) => {
         }}
         value={searchTerm}
       />
+      <button
+        className="absolute right-[11px] top-[8px] cursor-pointer"
+        data-testid="search-clear-button"
+        onClick={() => handleSearch('')}
+      >
+        <XMarkIcon className="h-5 w-5 text-[var(--text-darker)]" />
+      </button>
     </div>
   );
 };

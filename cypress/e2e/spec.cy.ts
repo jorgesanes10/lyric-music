@@ -55,7 +55,7 @@ describe('template spec', () => {
     cy.get('nav [data-testid="search-input"]').type('echo');
     cy.get('[data-testid="band-widget"]').should('have.length', 3);
 
-    cy.get('nav [data-testid="search-input"]').clear();
+    cy.get('nav [data-testid="search-clear-button"]').click();
     cy.get('[data-testid="band-widget"]').should('have.length', 12);
 
     cy.get('nav [data-testid="search-input"]').type('electric');
