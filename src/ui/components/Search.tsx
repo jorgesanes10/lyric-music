@@ -3,12 +3,20 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/16/solid';
 import clsx from 'clsx';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 
 export const Search = ({ className }: { className?: string }) => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
+
+  const query = searchParams.get('query');
+
+  useEffect(() => {
+    setSearchTerm(query || '');
+  }, [query]);
 
   const handleSearch = useDebouncedCallback((term) => {
     const params = new URLSearchParams(searchParams);
@@ -28,8 +36,11 @@ export const Search = ({ className }: { className?: string }) => {
       <input
         type="text"
         className="bg-[var(--background)] rounded-[19px] pl-9 pr-4 py-[6px] w-full"
-        onChange={(e) => handleSearch(e.target.value)}
-        defaultValue={searchParams.get('query') || ''}
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+          handleSearch(e.target.value);
+        }}
+        value={searchTerm}
       />
     </div>
   );
