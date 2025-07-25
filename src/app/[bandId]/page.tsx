@@ -12,13 +12,12 @@ export default async function BandDetail({
 
   const [band] = (await fetchBandById(bandId)) as Band[];
 
-  console.log('band', band);
-
   return (
     <div className="flex items-end justify-center h-full">
       <Link
         href="/"
         className="absolute left-5 top-5 bg-black rounded-full p-2 z-10"
+        data-testid="back-button"
       >
         <ArrowLeftIcon className="h-10 w-10 text-white" />
       </Link>

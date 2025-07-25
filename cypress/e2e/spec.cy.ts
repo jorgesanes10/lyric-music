@@ -65,4 +65,15 @@ describe('template spec', () => {
       'Electric Tide',
     );
   });
+
+  it('navigates to the band description page', () => {
+    cy.visit('http://localhost:3000', { failOnStatusCode: false });
+
+    cy.get('[data-testid="band-widget"]').first().click();
+
+    cy.get('h1').should('have.text', 'The Velvet Echo');
+
+    cy.get('[data-testid="back-button"]').click();
+    cy.get('[data-testid="band-widget"]').should('have.length', 12);
+  });
 });
