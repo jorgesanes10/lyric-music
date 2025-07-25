@@ -8,6 +8,7 @@ export type Band = {
   band_name: string;
   album: string;
   genre: string;
+  video: string;
 };
 
 interface BandWidgetProps {

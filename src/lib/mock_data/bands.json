@@ -1,14 +1,86 @@
 [
-    { "id": "001", "band_name": "The Velvet Echo", "album": "Whispers in the Wind", "genre": "rock" },
-    { "id": "002", "band_name": "Silver Strings", "album": "Resonance", "genre": "country" },
-    { "id": "003", "band_name": "Electric Tide", "album": "Waves of Voltage", "genre": "rock" },
-    { "id": "004", "band_name": "Crimson Groove", "album": "Scarlet Rhythms", "genre": "pop" },
-    { "id": "005", "band_name": "Neon Reverie", "album": "Echoes of Tomorrow", "genre": "pop" },
-    { "id": "006", "band_name": "Echo Drift", "album": "Drifting Soundscapes", "genre": "rock" },
-    { "id": "007", "band_name": "Starlight Rebels", "album": "Cosmic Revolt", "genre": "pop" },
-    { "id": "008", "band_name": "Aurora Vibe", "album": "Northern Lights", "genre": "country" },
-    { "id": "009", "band_name": "Midnight Sonar", "album": "After Dark", "genre": "rock" },
-    { "id": "010", "band_name": "Blazing Nova", "album": "Solar Flare", "genre": "pop" },
-    { "id": "011", "band_name": "Harmonic Pulse", "album": "Rhythmic Harmony", "genre": "country" },
-    { "id": "012", "band_name": "Fusion Zenith", "album": "Zenith Rhapsody", "genre": "rock" }
+  {
+    "id": "001",
+    "band_name": "The Velvet Echo",
+    "album": "Whispers in the Wind",
+    "genre": "rock",
+    "video": "https://videocdn.cdnpk.net/videos/6254edd0-b82a-48dc-b1a4-40f7a07d6fae/horizontal/previews/clear/large.mp4?token=exp=1753456977~hmac=2101e9b3ebc994f197cfae723a9a83af97a755e994bc02c04eb326b21b5aa36c"
+  },
+  {
+    "id": "002",
+    "band_name": "Silver Strings",
+    "album": "Resonance",
+    "genre": "country",
+    "video": "https://videocdn.cdnpk.net/videos/28959877-0fb4-47d2-aa46-edfebb9cad64/horizontal/previews/clear/large.mp4?token=exp=1753457045~hmac=a775876e26ee87163e8515a0dc51ba3518812a9ae5aa1ec934cf78f3205754bb"
+  },
+  {
+    "id": "003",
+    "band_name": "Electric Tide",
+    "album": "Waves of Voltage",
+    "genre": "rock",
+    "video": "https://videocdn.cdnpk.net/videos/5f08dd8a-9dd9-4f4f-82b7-c12a84bc41a6/horizontal/previews/clear/large.mp4?token=exp=1753457084~hmac=953bbbfc27fc5d5839a1f5ce4e5a2421fbc979c33adccbacc560d70ba584a4ea"
+  },
+  {
+    "id": "004",
+    "band_name": "Crimson Groove",
+    "album": "Scarlet Rhythms",
+    "genre": "pop",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "005",
+    "band_name": "Neon Reverie",
+    "album": "Echoes of Tomorrow",
+    "genre": "pop",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "006",
+    "band_name": "Echo Drift",
+    "album": "Drifting Soundscapes",
+    "genre": "rock",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "007",
+    "band_name": "Starlight Rebels",
+    "album": "Cosmic Revolt",
+    "genre": "pop",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "008",
+    "band_name": "Aurora Vibe",
+    "album": "Northern Lights",
+    "genre": "country",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "009",
+    "band_name": "Midnight Sonar",
+    "album": "After Dark",
+    "genre": "rock",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "010",
+    "band_name": "Blazing Nova",
+    "album": "Solar Flare",
+    "genre": "pop",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "011",
+    "band_name": "Harmonic Pulse",
+    "album": "Rhythmic Harmony",
+    "genre": "country",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  },
+  {
+    "id": "012",
+    "band_name": "Fusion Zenith",
+    "album": "Zenith Rhapsody",
+    "genre": "rock",
+    "video": "https://videocdn.cdnpk.net/videos/a0920f13-46eb-466c-ace5-9bc4550e643e/horizontal/previews/clear/large.mp4?token=exp=1753457127~hmac=c067a469707262d26822699c391ccb0281fae2ff70aaf4be4c34165bcc510163"
+  }
 ]

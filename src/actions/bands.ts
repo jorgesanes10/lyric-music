@@ -1,7 +1,13 @@
 import bands from '@/lib/mock_data/bands.json';
 
 const addDescriptions = async (
-  list: { id: string; band_name: string; album: string; genre: string }[],
+  list: {
+    id: string;
+    band_name: string;
+    album: string;
+    genre: string;
+    video: string;
+  }[],
 ) => {
   return await Promise.all(
     list.map(async (band) => {
