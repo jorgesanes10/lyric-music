@@ -21,7 +21,7 @@ export const BandWidget = ({ band }: BandWidgetProps) => {
   const { id, band_name, album, description } = band;
 
   return (
-    <Panel>
+    <Panel data-testid="band-widget">
       <article id={id}>
         <Image
           onError={() => setImageUrl('/images/default.png')}

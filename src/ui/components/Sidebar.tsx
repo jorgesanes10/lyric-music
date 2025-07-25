@@ -16,6 +16,7 @@ const CloseButton = ({
     <button
       className={`cursor-pointer close-button-${top ? 'top' : 'bottom'}`}
       onClick={onClick}
+      data-testid={top ? 'close-button-top' : 'close-button-bottom'}
     >
       <XMarkIcon className="h-7 w-7 text-[var(--text-color)]" />
     </button>

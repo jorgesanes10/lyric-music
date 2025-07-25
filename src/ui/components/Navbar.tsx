@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Panel } from './Panel';
@@ -43,6 +45,7 @@ export const Navbar = ({
               'menu-button cursor-pointer',
               showMenuButton && 'show-menu-button',
             )}
+            data-testid="menu-button-sidebar"
             onClick={onMenuButtonClick}
           >
             <Bars3Icon className="h-9 w-9 text-[var(--text-color)]" />

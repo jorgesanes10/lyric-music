@@ -31,6 +31,7 @@ export const Filters = ({ className }: { className?: string }) => {
           onClick={() => {
             handleClick(genre);
           }}
+          data-testid={`${genre.toLowerCase()}-filter`}
           key={`${genre}-filter`}
           className={clsx(
             'px-5 py-[7px] rounded-[19px] text-[var(--text-color)] cursor-pointer border border-white transition-all duration-300 ease-in-out',

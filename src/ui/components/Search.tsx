@@ -35,6 +35,7 @@ export const Search = ({ className }: { className?: string }) => {
       <MagnifyingGlassIcon className="h-4 w-4 text-[var(--text-darker)] absolute left-[11px] top-[10px]" />
       <input
         type="text"
+        data-testid="search-input"
         className="bg-[var(--background)] rounded-[19px] pl-9 pr-4 py-[6px] w-full"
         onChange={(e) => {
           setSearchTerm(e.target.value);

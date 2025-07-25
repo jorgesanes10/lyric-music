@@ -8,6 +8,22 @@
 1. Usage of Tailwind and regular CSS for styling.
 1. Search for bands by album name in addition to band name.
 1. Changed the favicon to a custom one for personalization.
+1. Added e2e tests with Cypress.
+
+## Running the project
+
+- Install the necessary dependencies by running `npm install`.
+- Run `npm run dev` to start the development server. The application will be available at `http://localhost:3000`.
+
+## Running the e2e tests
+
+- Ensure the development server is running.
+- Run `npm run e2e:test:open` to open Cypress.
+- In the Cypress UI, click on "E2E Testing".
+- Select a browser (e.g., Chrome) and click "Start E2E Testing".
+- Click on "spec.cy.ts" to run the e2e tests.
+
+Alternatively, run `npm run e2e:test:run` to execute the tests in headless mode. This runs the tests in the console. This way of running the tests is used in ci/cd pipelines.
 
 ## Introduction
 
