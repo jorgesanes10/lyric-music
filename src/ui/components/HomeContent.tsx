@@ -1,16 +1,10 @@
 'use client';
 
 import { useLayoutEffect, useState } from 'react';
-import { XMarkIcon } from '@heroicons/react/16/solid';
 import { BandsContainer } from './BandsContainer';
 import { Navbar } from './Navbar';
-import { Panel } from './Panel';
 import clsx from 'clsx';
 import { Band } from './BandWidget';
-import { FlagIcon } from '@heroicons/react/24/outline';
-import { Navigation } from './Navigation';
-import { Search } from './Search';
-import { Filters } from './Filters';
 import { Sidebar } from './Sidebar';
 
 export const HomeContent = ({ bands }: { bands: Band[] }) => {
