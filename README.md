@@ -1,5 +1,14 @@
 # Take Home Instructions
 
+## Results
+
+1. Everything asked for plus:
+1. Implementation of Dark and Light themes.
+1. Usage of URL query parameters to filter by genre and band.
+1. Usage of Tailwind and regular CSS for styling.
+1. Search for bands by album name in addition to band name.
+1. Changed the favicon to a custom one for personalization.
+
 ## Introduction
 
 This project requires you to create a layout as shown in the provided [Sketch Design](https://www.sketch.com/s/547dbe8d-e0d7-4c52-b027-1d05fe2277a2/a/Mm2bAPW). The layout includes:

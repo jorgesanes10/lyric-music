@@ -45,18 +45,6 @@ main {
   border: none;
 }
 
-.nav-filters:hover button:nth-child(2) {
-  transform: translateX(40px);
-}
-
-.nav-filters:hover button:nth-child(3) {
-  transform: translateX(80px);
-}
-
-.nav-filters:hover button:nth-child(4) {
-  transform: translateX(120px);
-}
-
 .menu-button {
   display: none;
 }
@@ -96,6 +84,18 @@ main {
 @media (max-width: 1405px) {
   .nav-filters button {
     border: 1px solid var(--foreground);
+  }
+
+  .nav-filters:hover button:nth-child(2) {
+    transform: translateX(40px);
+  }
+
+  .nav-filters:hover button:nth-child(3) {
+    transform: translateX(80px);
+  }
+
+  .nav-filters:hover button:nth-child(4) {
+    transform: translateX(120px);
   }
 
   .nav-filters button:not(:first-child) {

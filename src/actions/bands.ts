@@ -38,9 +38,9 @@ export const fetchBands = async ({
   if (query) {
     const lowerCaseQuery = query.toLowerCase();
     result = result.filter(
-      (band) => band.band_name.toLowerCase().includes(lowerCaseQuery),
-      // Uncomment this to enable album search
-      // || band.album.toLowerCase().includes(lowerCaseQuery),
+      (band) =>
+        band.band_name.toLowerCase().includes(lowerCaseQuery) ||
+        band.album.toLowerCase().includes(lowerCaseQuery),
     );
   }
 
